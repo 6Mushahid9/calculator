@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(61, 60, 60);
+    border: 1px solid;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    padding: 2rem;
+    /* background-color: #e8e8e8; */
+    backdrop-filter: blur(3px);
+    max-width: 90%;
+    border: 3px solid rgb(73, 73, 73);
+    border-radius: 2rem;
+}
+.input {
+    font-family: "Kanit", sans-serif;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    border: 2px solid black;
+    /* background-color: transparent; */
+    background-color: #e8e8e8;
+    box-shadow: 4px 4px black;
+    font-size: 25px;
+    font-weight: 300;
+    color: black;
+    padding: 5px 10px;
+    outline: none;
+    text-align: right;
+    letter-spacing: 3px;
+  }
+  
+  .input::placeholder {
+    color: #7e7e7e;
+    opacity: 0.8;
+  }
+  
+.buttons{
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+button {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-family: "Kanit", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+.bigger{
+    font-size: 20px;
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 10px;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }
+
+  /* @media (max-width:370px){
+    button{
+        
+    }
+  } */
